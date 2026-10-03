@@ -1,0 +1,19 @@
+Mode: offline (deterministic) | quality: heuristic | compact threshold 1000 tokens, keep 4 messages | profile min confidence 0.0
+
+## Standard Benchmark (10 conversations, 101 turns, 14 recall questions)
+
+| Agent    | Agent tokens only   | Prompt tokens processed   | Cross-session recall   | Response quality   | Memory growth (bytes)   | Compactions   |
+|----------|---------------------|---------------------------|------------------------|--------------------|-------------------------|---------------|
+| Baseline | 943                 | 17048                     | 0.000                  | 0.000              | 0                       | 0             |
+| Advanced | 990                 | 24791                     | 1.000                  | 1.000              | 405                     | 0             |
+
+Advanced / Baseline: prompt tokens 1.45x, agent tokens 1.05x
+
+## Long-Context Stress Benchmark (1 conversations, 16 turns, 3 recall questions)
+
+| Agent    | Agent tokens only   | Prompt tokens processed   | Cross-session recall   | Response quality   | Memory growth (bytes)   | Compactions   |
+|----------|---------------------|---------------------------|------------------------|--------------------|-------------------------|---------------|
+| Baseline | 196                 | 22590                     | 0.000                  | 0.000              | 0                       | 0             |
+| Advanced | 175                 | 11348                     | 1.000                  | 1.000              | 256                     | 3             |
+
+Advanced / Baseline: prompt tokens 0.50x, agent tokens 0.89x

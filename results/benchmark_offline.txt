@@ -1,0 +1,164 @@
+Mode: offline (deterministic) | quality: heuristic | compact threshold 1000 tokens, keep 4 messages | profile min confidence 0.7
+
+## Standard Benchmark (10 conversations, 101 turns, 14 recall questions)
+
+| Agent    | Agent tokens only   | Prompt tokens processed   | Cross-session recall   | Response quality   | Memory growth (bytes)   | Compactions   |
+|----------|---------------------|---------------------------|------------------------|--------------------|-------------------------|---------------|
+| Baseline | 929                 | 16990                     | 0.000                  | 0.000              | 0                       | 0             |
+| Advanced | 959                 | 23945                     | 1.000                  | 1.000              | 360                     | 0             |
+
+Advanced / Baseline: prompt tokens 1.41x, agent tokens 1.03x
+
+[Baseline] recall=0.0 | Mình tên gì và đồ uống yêu thích là gì?
+- Tên: chưa có trong cuộc trò chuyện này
+- Đồ uống yêu thích: chưa có trong cuộc trò chuyện này
+
+[Baseline] recall=0.0 | Nhắc lại style trả lời mình thích và đồ uống yêu thích của mình.
+- Đồ uống yêu thích: chưa có trong cuộc trò chuyện này
+- Style trả lời: chưa có trong cuộc trò chuyện này
+
+[Baseline] recall=0.0 | Tên mình là gì và mình thích kiểu trả lời như thế nào?
+- Tên: chưa có trong cuộc trò chuyện này
+- Style trả lời: chưa có trong cuộc trò chuyện này
+
+[Baseline] recall=0.0 | Hiện tại mình đang ở đâu?
+- Nơi ở hiện tại: chưa có trong cuộc trò chuyện này
+
+[Baseline] recall=0.0 | Món ăn yêu thích của mình là gì và mình nuôi con gì?
+- Món ăn yêu thích: chưa có trong cuộc trò chuyện này
+- Thú cưng: chưa có trong cuộc trò chuyện này
+
+[Baseline] recall=0.0 | Bạn biết DũngCT là ai không? Hãy nhắc ngắn gọn tên và mối quan tâm chính của mình.
+- Tên: chưa có trong cuộc trò chuyện này
+- Mối quan tâm kỹ thuật: chưa có trong cuộc trò chuyện này
+
+[Baseline] recall=0.0 | Hiện tại mình làm nghề gì và mình còn ở Huế không?
+- Nơi ở hiện tại: chưa có trong cuộc trò chuyện này
+- Nghề nghiệp hiện tại: chưa có trong cuộc trò chuyện này
+
+[Baseline] recall=0.0 | Nếu phải chọn giữa nghề cũ và nghề mới, nghề hiện tại của mình là gì?
+- Nghề nghiệp hiện tại: chưa có trong cuộc trò chuyện này
+
+[Baseline] recall=0.0 | Mình thích style trả lời như thế nào và hiện đang ở đâu?
+- Nơi ở hiện tại: chưa có trong cuộc trò chuyện này
+- Style trả lời: chưa có trong cuộc trò chuyện này
+
+[Baseline] recall=0.0 | Đồ uống và món ăn yêu thích của mình là gì?
+- Đồ uống yêu thích: chưa có trong cuộc trò chuyện này
+- Món ăn yêu thích: chưa có trong cuộc trò chuyện này
+
+[Baseline] recall=0.0 | Hiện tại mình đang ở đâu và mình nuôi con gì?
+- Nơi ở hiện tại: chưa có trong cuộc trò chuyện này
+- Thú cưng: chưa có trong cuộc trò chuyện này
+
+[Baseline] recall=0.0 | Tóm tắt ngắn về mình: tên, nghề nghiệp hiện tại và hai mối quan tâm kỹ thuật chính.
+- Tên: chưa có trong cuộc trò chuyện này
+- Nghề nghiệp hiện tại: chưa có trong cuộc trò chuyện này
+- Mối quan tâm kỹ thuật: chưa có trong cuộc trò chuyện này
+
+[Baseline] recall=0.0 | Nhắc lại giúp mình: tên, nơi ở hiện tại, nghề nghiệp hiện tại, đồ uống yêu thích và style trả lời mình thích.
+- Tên: chưa có trong cuộc trò chuyện này
+- Nơi ở hiện tại: chưa có trong cuộc trò chuyện này
+- Nghề nghiệp hiện tại: chưa có trong cuộc trò chuyện này
+- Đồ uống yêu thích: chưa có trong cuộc trò chuyện này
+- Style trả lời: chưa có trong cuộc trò chuyện này
+
+[Baseline] recall=0.0 | Nhắc lại giúp mình: tên, món ăn yêu thích và mình nuôi con gì.
+- Tên: chưa có trong cuộc trò chuyện này
+- Món ăn yêu thích: chưa có trong cuộc trò chuyện này
+- Thú cưng: chưa có trong cuộc trò chuyện này
+
+[Advanced] recall=1.0 | Mình tên gì và đồ uống yêu thích là gì?
+- Tên: DũngCT
+- Đồ uống yêu thích: cà phê sữa đá
+
+[Advanced] recall=1.0 | Nhắc lại style trả lời mình thích và đồ uống yêu thích của mình.
+- Đồ uống yêu thích: cà phê sữa đá
+- Style trả lời: ngắn gọn, rõ ý, có ví dụ thực tế, bullet
+
+[Advanced] recall=1.0 | Tên mình là gì và mình thích kiểu trả lời như thế nào?
+- Tên: DũngCT
+- Style trả lời: ngắn gọn, rõ ý, có ví dụ thực tế, bullet
+
+[Advanced] recall=1.0 | Hiện tại mình đang ở đâu?
+- Nơi ở hiện tại: Huế
+
+[Advanced] recall=1.0 | Món ăn yêu thích của mình là gì và mình nuôi con gì?
+- Món ăn yêu thích: mì Quảng
+- Thú cưng: corgi tên Bơ
+
+[Advanced] recall=1.0 | Bạn biết DũngCT là ai không? Hãy nhắc ngắn gọn tên và mối quan tâm chính của mình.
+- Tên: DũngCT
+- Mối quan tâm kỹ thuật: Python, AI ứng dụng, AI agent, benchmark memory
+
+[Advanced] recall=1.0 | Hiện tại mình làm nghề gì và mình còn ở Huế không?
+- Nơi ở hiện tại: Huế
+- Nghề nghiệp hiện tại: MLOps engineer
+
+[Advanced] recall=1.0 | Nếu phải chọn giữa nghề cũ và nghề mới, nghề hiện tại của mình là gì?
+- Nghề nghiệp hiện tại: MLOps engineer
+
+[Advanced] recall=1.0 | Mình thích style trả lời như thế nào và hiện đang ở đâu?
+- Nơi ở hiện tại: Huế
+- Style trả lời: ngắn gọn, rõ ý, có ví dụ thực tế, bullet, có ví dụ thực chiến, nhấn trade-off, có cấu trúc
+
+[Advanced] recall=1.0 | Đồ uống và món ăn yêu thích của mình là gì?
+- Đồ uống yêu thích: cà phê sữa đá
+- Món ăn yêu thích: mì Quảng
+
+[Advanced] recall=1.0 | Hiện tại mình đang ở đâu và mình nuôi con gì?
+- Nơi ở hiện tại: Huế
+- Thú cưng: corgi tên Bơ
+
+[Advanced] recall=1.0 | Tóm tắt ngắn về mình: tên, nghề nghiệp hiện tại và hai mối quan tâm kỹ thuật chính.
+- Tên: DũngCT
+- Nghề nghiệp hiện tại: MLOps engineer
+- Mối quan tâm kỹ thuật: Python, AI ứng dụng, AI agent, benchmark memory
+
+[Advanced] recall=1.0 | Nhắc lại giúp mình: tên, nơi ở hiện tại, nghề nghiệp hiện tại, đồ uống yêu thích và style trả lời mình thích.
+- Tên: DũngCT
+- Nơi ở hiện tại: Huế
+- Nghề nghiệp hiện tại: MLOps engineer
+- Đồ uống yêu thích: cà phê sữa đá
+- Style trả lời: ngắn gọn, rõ ý, có ví dụ thực tế, bullet, có ví dụ thực chiến, nhấn trade-off, có cấu trúc
+
+[Advanced] recall=1.0 | Nhắc lại giúp mình: tên, món ăn yêu thích và mình nuôi con gì.
+- Tên: DũngCT
+- Món ăn yêu thích: mì Quảng
+- Thú cưng: corgi tên Bơ
+
+## Long-Context Stress Benchmark (1 conversations, 16 turns, 3 recall questions)
+
+| Agent    | Agent tokens only   | Prompt tokens processed   | Cross-session recall   | Response quality   | Memory growth (bytes)   | Compactions   |
+|----------|---------------------|---------------------------|------------------------|--------------------|-------------------------|---------------|
+| Baseline | 196                 | 22590                     | 0.000                  | 0.000              | 0                       | 0             |
+| Advanced | 175                 | 11348                     | 1.000                  | 1.000              | 256                     | 3             |
+
+Advanced / Baseline: prompt tokens 0.50x, agent tokens 0.89x
+
+[Baseline] recall=0.0 | Sang thread mới rồi, nhắc lại giúp mình tên, nghề nghiệp hiện tại, nơi ở hiện tại và style trả lời mình thích.
+- Tên: chưa có trong cuộc trò chuyện này
+- Nơi ở hiện tại: chưa có trong cuộc trò chuyện này
+- Nghề nghiệp hiện tại: chưa có trong cuộc trò chuyện này
+- Style trả lời: chưa có trong cuộc trò chuyện này
+
+[Baseline] recall=0.0 | Nếu ai đó nhắc Huế, Hà Nội hay product manager, đâu mới là nghề nghiệp và nơi ở hiện tại của mình?
+- Nơi ở hiện tại: chưa có trong cuộc trò chuyện này
+- Nghề nghiệp hiện tại: chưa có trong cuộc trò chuyện này
+
+[Baseline] recall=0.0 | Nhắc lại giúp mình tên và style trả lời mình thích trong stress test này.
+- Tên: chưa có trong cuộc trò chuyện này
+- Style trả lời: chưa có trong cuộc trò chuyện này
+
+[Advanced] recall=1.0 | Sang thread mới rồi, nhắc lại giúp mình tên, nghề nghiệp hiện tại, nơi ở hiện tại và style trả lời mình thích.
+- Tên: DũngCT Stress
+- Nơi ở hiện tại: Đà Nẵng
+- Nghề nghiệp hiện tại: MLOps engineer; Style trả lời: 3 bullet, ngắn gọn, có ví dụ thực chiến, có cấu trúc, nhấn trade-off
+
+[Advanced] recall=1.0 | Nếu ai đó nhắc Huế, Hà Nội hay product manager, đâu mới là nghề nghiệp và nơi ở hiện tại của mình?
+- Nơi ở hiện tại: Đà Nẵng
+- Nghề nghiệp hiện tại: MLOps engineer
+
+[Advanced] recall=1.0 | Nhắc lại giúp mình tên và style trả lời mình thích trong stress test này.
+- Tên: DũngCT Stress
+- Style trả lời: 3 bullet, ngắn gọn, có ví dụ thực chiến, có cấu trúc, nhấn trade-off
